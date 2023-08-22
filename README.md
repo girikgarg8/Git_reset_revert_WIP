@@ -22,6 +22,13 @@ Unrelated but a useful piece of information: Using the `git --no-pager log ` com
 
 ![Git_reset_soft_demo](Git_reset_soft_demo.png)
 
-The changes in the staging area and working area are preserved when using soft reset:
+The changes in the staging area and working area are preserved when using soft reset, the committed files from the new commit are moved to staging area:
 
-![]()
+![Git_soft_reset_part_1](Git_soft_reset_part_1.png)
+![Git_soft_reset_part_2](Git_soft_reset_part_2.png)
+
+2. `--mixed option`: This is the default option for using git reset. In this mode, the changes from the staging area of the current commit are erased, and the staging area instead has the changes from the commit where we reset the branch pointer to. To make the point more clear, let's consider the picture below:
+
+The files in the staging area from the current commit's working area are un-staged and moved to the working area.
+
+![Git_mixed_reset](Git_mixed_reset.png)
