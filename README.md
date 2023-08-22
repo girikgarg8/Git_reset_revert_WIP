@@ -18,6 +18,10 @@ There are two ways to do this:
 
 2. Using `git reset ORIG_HEAD`. The ORIG_HEAD is a backup reference to the HEAD before a drastic change is made to the HEAD pointer. In other words, we can also say that the ORIG_HEAD points to the branch before the `git reset` option is executed.
 
-Unrelated but a useful piece of information: Using the `git --no-pager log ` command can be used to disable the pagerwhile viewing the commit history.
+Unrelated but a useful piece of information: Using the `git --no-pager log ` command can be used to disable the pager while viewing the commit history.
 
-22:14
+![Git_reset_soft_demo](Git_reset_soft_demo.png)
+
+The changes in the staging area and working area are preserved when using soft reset:
+
+![]()
