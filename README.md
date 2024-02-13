@@ -32,3 +32,30 @@ The changes in the staging area and working area are preserved when using soft r
 The files in the staging area from the current commit's working area are un-staged and moved to the working area.
 
 ![Git_mixed_reset](Git_mixed_reset.png)
+
+3.  `--hard option`: The changes from the commits, the staging area and the working directory all are lost when doing a hard Git reset.
+
+The bible to clear all the doubts, with suitable examples:  [Atlassian ](https://www.atlassian.com/git/tutorials/undoing-changes/git-reset#:~:text=Git%20reset%20operates%20on%20%22The,be%20passed%20to%20git%20reset%20.)
+Answer from Stack Overflow which clarifies the concept even further: 
+
+```
+I find it best to understand them by breaking down files into three categories: unstaged, staged, commit:
+
+--hard should be easy to understand, it restores everything
+
+--mixed (default) :
+unstaged files: don't change
+staged files: move to unstaged
+commit files: move to unstaged
+
+--soft:
+unstaged files: don't change
+staged files: dont' change
+commit files: move to staged
+```
+
+There's one way to still gain control if we lose our changes accidentally: using the `git reflog` command. Reference logs, or "reflogs", record when the tips of branches and other references were updated in the local repository. However, reflogs come with a limitation that they are stored for 90 days, by default. 
+
+1:09:25
+
+===> A safer way to undo 
